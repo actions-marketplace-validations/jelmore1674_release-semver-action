@@ -21,8 +21,8 @@ importers:
         specifier: ^1.3.11
         version: 1.3.11
       '@jelmore1674/github-action-helpers':
-        specifier: ^0.2.12
-        version: 0.2.12
+        specifier: ^0.2.13
+        version: 0.2.13
       semver:
         specifier: ^7.7.3
         version: 7.7.3
@@ -370,8 +370,8 @@ packages:
   '@jelmore1674/changelog@1.3.11':
     resolution: {integrity: sha512-cUe1163DTPE0m+Czzndl1y/Ev+4hOKIR8eiUz4k0cXgquDUziPvZ6SBH4685zcR8ZEn/4q8CKSloStQLZkshEg==}
 
-  '@jelmore1674/github-action-helpers@0.2.12':
-    resolution: {integrity: sha512-FrKEW2FJpSXlglN0OMg1DIsw3v54dykMzBuK+rDs1R1spm7Xn5jsTk/VD4R2SYU8kjv0GqLsDE64CV0vW/Rw7Q==}
+  '@jelmore1674/github-action-helpers@0.2.13':
+    resolution: {integrity: sha512-G1gO66iqnQwJ2ukiuvPb/SKUtKUQ/ipXRsxuDtC8eRdsUUqUuv/YAlGG4gUWnc3EZvygOBelWcEDlV03aQdWbA==}
 
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
@@ -1201,7 +1201,7 @@ snapshots:
       latest-semver: 4.0.0
       semver: 7.7.3
 
-  '@jelmore1674/github-action-helpers@0.2.12':
+  '@jelmore1674/github-action-helpers@0.2.13':
     dependencies:
       '@actions/core': 2.0.1
       '@actions/exec': 2.0.0
