@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updates `@biomejs/biome` from 2.5.3 to 2.5.4 [`1da42e8`](https://github.com/jelmore1674/release-semver-action/commit/1da42e838a9022677d6390903da2cd4640fbe188) | [#98](https://github.com/jelmore1674/release-semver-action/pull/98) | [dependabot](https://github.com/apps/dependabot)
 - Updates `dprint` from 0.55.1 to 0.55.2 [`1da42e8`](https://github.com/jelmore1674/release-semver-action/commit/1da42e838a9022677d6390903da2cd4640fbe188) | [#98](https://github.com/jelmore1674/release-semver-action/pull/98) | [dependabot](https://github.com/apps/dependabot)
 - Updates `@jelmore1674/changelog` from 2.0.4 to 2.0.5 [`0f7ba11`](https://github.com/jelmore1674/release-semver-action/commit/0f7ba1139cace1f9a9a2572e32477d2f354a5281) | [#99](https://github.com/jelmore1674/release-semver-action/pull/99) | [dependabot](https://github.com/apps/dependabot)
+- Updates `@biomejs/biome` from 2.5.4 to 2.5.5 [`0fbe9da`](https://github.com/jelmore1674/release-semver-action/commit/0fbe9da2edfaaf9e570e10a3762be8f097baa654) | [#100](https://github.com/jelmore1674/release-semver-action/pull/100) | [dependabot](https://github.com/apps/dependabot)
 
 ## [2.1.1] - 2026-07-21
 
