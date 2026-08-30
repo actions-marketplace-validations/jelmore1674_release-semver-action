@@ -17,10 +17,7 @@ jobs:
     steps:
       - name: Load secret
         id: load-op
-        uses: 1password/load-secrets-action@v2
-        with:
-          # Export loaded secrets as environment variables
-          export-env: false
+        uses: 1password/load-secrets-action@v4
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           GPG_KEY: op://Actions/shared/GPG_KEY
@@ -30,26 +27,24 @@ jobs:
 
       - name: Get Token
         id: get_workflow_token
-        uses: peter-murray/workflow-application-token-action@v4
+        uses: actions/create-github-app-token@v3
         with:
-          application_id: ${{ steps.load-op.outputs.APP_ID }}
-          application_private_key: ${{ steps.load-op.outputs.GH_APP_KEY }}
-          revoke_token: true
+          client-id: ${{ steps.load-op.outputs.APP_ID }}
+          private-key: ${{ steps.load-op.outputs.GH_APP_KEY }}
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           token: ${{ steps.get_workflow_token.outputs.token }}
 
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "pnpm"
+      - uses: jdx/mise-action@v4
+
       - name: Install Packages.
         run: pnpm i --frozen-lockfile
+
       - name: Lint
         run: pnpm lint
-      - uses: dprint/check@v2.2
+
+      - uses: dprint/check@v2.3
       - name: Build
         run: pnpm build
 
@@ -76,7 +71,7 @@ jobs:
       - if: ${{ steps.dirty.outputs.changes == 'true' }}
         name: "Import GPG key"
         id: import-gpg
-        uses: crazy-max/ghaction-import-gpg@v6
+        uses: crazy-max/ghaction-import-gpg@v7
         with:
           gpg_private_key: ${{ steps.decode.outputs.GPG }}
           passphrase: "${{ steps.load-op.outputs.GPG_PASSPHRASE }}"
@@ -85,7 +80,7 @@ jobs:
 
       - if: ${{ steps.dirty.outputs.changes == 'true' }}
         name: "Commit and push changes"
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_author: "${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>"
           commit_user_name: ${{ steps.import-gpg.outputs.name }}

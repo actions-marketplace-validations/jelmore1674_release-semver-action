@@ -19,12 +19,12 @@ jobs:
   enforce-changelog:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 2
 
-      - uses: jelmore1674/build-changelog/enforcer@v1
+      - uses: jelmore1674/build-changelog/enforcer@v2
         with:
           skip_labels: ops,maintenance,docs
           enable_dependabot: true

@@ -4,6 +4,8 @@ import process from "node:process";
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { createRelease } from ".";
 
+vi.mock("@actions/core", { spy: true });
+
 describe("createRelease", () => {
   afterEach(() => {
     vi.resetAllMocks();
@@ -48,6 +50,6 @@ describe("createRelease", () => {
       )
       .reply(404);
 
-    await expect(() => createRelease("1.0.0")).rejects.toThrowError();
+    await expect(() => createRelease("1.0.0")).rejects.toThrow();
   });
 });
