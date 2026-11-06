@@ -22,17 +22,17 @@
     "semver": "^7.8.5"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.5",
-    "@octokit/types": "^16.0.0",
+    "@biomejs/biome": "^2.6.4",
+    "@octokit/types": "^18.0.0",
     "@types/node": "^24.12.2",
     "@types/semver": "^7.7.1",
-    "@vercel/ncc": "^0.44.1",
-    "@vitest/coverage-v8": "4.1.10",
-    "dprint": "^0.55.2",
-    "memfs": "^4.64.0",
-    "nock": "^14.0.16",
+    "@vercel/ncc": "^0.45.0",
+    "@vitest/coverage-v8": "5.1.0",
+    "dprint": "^0.64.3",
+    "memfs": "^4.80.0",
+    "nock": "^15.0.5",
     "typescript": "^7.0.2",
-    "vitest": "^4.1.10"
+    "vitest": "^5.1.0"
   },
   "engines": {
     "node": "^24.0.0"
